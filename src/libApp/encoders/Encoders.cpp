@@ -25,6 +25,7 @@
   #include "../../lib/encoder/bissc/As37h39bb.h"
   #include "../../lib/encoder/bissc/Jtw24.h"
   #include "../../lib/encoder/bissc/Jtw26.h"
+  #include "../../lib/encoder/bissc/Renishaw19bit.h"
 
   void pollEncoders() { encoders.poll(); }
 
@@ -44,6 +45,8 @@
     Jtw26 encAxis1(1, AXIS1_ENCODER_A_PIN, AXIS1_ENCODER_B_PIN);
   #elif AXIS1_ENCODER == LIKA_ASC85
     LikaAsc85 encAxis1(1, AXIS1_ENCODER_A_PIN, AXIS1_ENCODER_B_PIN);
+  #elif AXIS1_ENCODER == RENISHAW_19BIT
+    Ren19 encAxis1(1, AXIS1_ENCODER_A_PIN, AXIS1_ENCODER_B_PIN);
   #endif
 
   #if AXIS2_ENCODER == AB
@@ -62,6 +65,8 @@
     Jtw26 encAxis2(2, AXIS2_ENCODER_A_PIN, AXIS2_ENCODER_B_PIN);
   #elif AXIS2_ENCODER == LIKA_ASC85
     LikaAsc85 encAxis2(2, AXIS2_ENCODER_A_PIN, AXIS2_ENCODER_B_PIN);
+  #elif AXIS2_ENCODER == RENISHAW_19BIT
+    Ren19 encAxis2(2, AXIS2_ENCODER_A_PIN, AXIS2_ENCODER_B_PIN);
   #endif
 #endif
 
@@ -269,4 +274,3 @@ void Encoders::init() {
 #endif
 
 Encoders encoders;
-
