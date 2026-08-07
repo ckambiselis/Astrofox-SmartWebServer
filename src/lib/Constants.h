@@ -118,7 +118,8 @@
 #define LIKA_ASC85                  10     // Lika ASC85 BISS-C interface 25bit encoder (experimental)
 #define KTECH_IME                   11     // KTech in motor encoder
 #define SERIAL_BRIDGE               12     // serial bridge to encoders
-#define ENC_LAST                    12
+#define RENISHAW_19BIT              13     // Renishaw 19bit single turn encoder
+#define ENC_LAST                    13
 
 // encoder filter types
 #define ENC_FILT_FIRST              1
